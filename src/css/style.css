@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;800&display=swap');
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+html, body{
+	margin: 0;
+}
+
+html, body{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #FAFAFA;
+}
+
+.hidden{
+	display: none !important;
+}
+
+.container{
+	padding: 4rem;
+}
+
+.card-container{
+	display: flex;
+	margin: 4rem 0;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.navbar{
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	padding: 0.5rem 3rem;
+	background-color: white;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+}
+
+.navbar__header{
+	color: #111517;
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 33px;
+	font-family: Nunito Sans;
+}
+
+.navbar__icon{
+	margin-left: auto;
+}
+
+.navbar__button{
+	margin: 0 0.5rem;
+	color: #111517;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 22px;
+	font-family: Nunito Sans;
+}
+
+.navbar__icon, .navbar__button{
+	cursor: pointer;
+}
+
+.search{
+	display: flex;
+}
+
+.search__icon{
+	z-index: 1;
+	display: flex;
+	position: relative;
+	align-items: center;
+	box-sizing: border-box;
+	background-color: white;
+	justify-content: center;
+	border-radius: 5px 0 0 5px;
+	padding: 1rem 1rem 1rem 1.5rem;
+	clip-path: inset(-5px 0px -5px -5px);
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+}
+
+.search__bar{
+	width: 400px;
+	border: none;
+	outline: none;
+	padding: 1rem 0;
+	box-sizing: border-box;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+}
+
+.search__dropdown{
+	width: 200px;
+	display: flex;
+	color: #111517;
+	cursor: default;
+	padding: 0 1.5rem;
+	margin-left: auto;
+	border-radius: 5px;
+	position: relative;
+	align-items: center;
+	box-sizing: border-box;
+	background-color: white;
+	justify-content: center;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+}
+
+.search__dropdown span{
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	font-family: Nunito Sans;
+}
+
+.search__dropdown svg{
+	opacity: 0.65;
+	margin-left: auto;
+}
+
+.search__dropdown__menu{
+	top: 55px;
+	width: 100%;
+	display: flex;
+	padding: 1rem 0;
+	position: absolute;
+	border-radius: 5px;
+	flex-direction: column;
+	background-color: white;
+	box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+}
+
+.search__dropdown__menu span{
+	cursor: pointer;
+	padding: 0.25rem 1.5rem;
+}
+
+.card{
+	width: 264px;
+	height: 336px;
+	margin: 4rem 2rem 0 2rem;
+	background-color: white;
+}
