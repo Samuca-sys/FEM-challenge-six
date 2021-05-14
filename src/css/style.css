@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap');
 
 ::-webkit-scrollbar {
 	display: none;
 }
 
-html, body{
+html, body, h4, p{
 	margin: 0;
 }
 
@@ -142,6 +142,58 @@ body{
 .card{
 	width: 264px;
 	height: 336px;
+	cursor: pointer;
+	border-radius: 5px;
 	margin: 4rem 2rem 0 2rem;
 	background-color: white;
+}
+
+.card__flag{
+	width: 100%;
+	height: 50%;
+	object-fit: cover;
+	border-radius: 5px 5px 0 0;
+}
+
+.card__info{
+	padding: 1.5rem;
+}
+
+.card__info span{
+	opacity: 0.85;
+	font-weight: 300;
+}
+
+.card__info__name{
+	color: #111517;
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 26px;
+	font-family: Nunito Sans;
+}
+
+.card__info__population{
+	color: #111517;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 1rem;
+	line-height: 16px;
+	font-family: Nunito Sans;
+}
+
+.card__info__region{
+	color: #111517;
+	font-size: 14px;
+	margin: 0.5rem 0;
+	font-weight: 600;
+	line-height: 16px;
+	font-family: Nunito Sans;
+}
+
+.card__info__capital{
+	color: #111517;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 16px;
+	font-family: Nunito Sans;
 }

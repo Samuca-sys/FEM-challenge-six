@@ -4,16 +4,16 @@ import axios from "axios";
 
 import Navbar from "./components/Navbar";
 import Search from "./components/Search";
-import Card from "./components/Card";
+import CardContainer from "./components/CardContainer";
 
 import "./css/style.css";
 
 const App = () => {
-	const [flagInfo, setFlagInfo] = useState(null);
+	const [flagInfo, setFlagInfo] = useState([]);
 	const [flags, setFlags] = useState(["germany", "usa", "brazil", "iceland", "afghanistan", "åland islands", "albania", "algeria"]);
 
 	const fetchFlags = useCallback(() => {
-		let list = [];
+		const list = [];
 		flags.forEach(async (flag) => {
 			await axios.get(`https://restcountries.eu/rest/v2/name/${flag}?fullText=true`)
 			.then((response) => {
@@ -34,28 +34,17 @@ const App = () => {
 	useEffect(() => {
 		fetchFlags().then((response) => {
 			console.log(response);
+		}).catch((response) => {
+			console.log("Error: " + response);
 		})
 	}, [fetchFlags])
-
-	useEffect(() => {
-		console.log(Array.isArray(flagInfo));
-	}, [flagInfo])
 	return(
 		<>
-			{flagInfo ? (
-				<>
-					<Navbar/>
-					<div className="container">
-						<Search/>
-						<div className="card-container">
-							{
-								flagInfo.map((country, index) => <Card key={index}/>)
-							}
-						</div>
-					</div>
-				</>
-			) : null
-			}
+			<Navbar/>
+			<div className="container">
+				<Search/>
+				<CardContainer flagInfo={flagInfo}/>
+			</div>
 		</>
 	)
 }
