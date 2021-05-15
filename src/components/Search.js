@@ -38,7 +38,7 @@ const Search = ({darkMode, search, setSearch, dropdown, setDropdown, filter, set
 						)
 					}
 				</div>
-				<input onChange={searchHandler} ref={searchRef} className={`search__bar ${darkMode ? "search__bar--dark" : ""}`} placeholder="Search for a country..." value={search}/>
+				<input onChange={searchHandler} ref={searchRef} className={`search__bar ${darkMode ? "search__bar--dark" : ""}`} placeholder="Search for a country..." value={search} aria-label="search"/>
 			</div>
 			<div className={`search__dropdown ${darkMode ? "search__dropdown--dark" : ""}`} onClick={dropdownHandler}>
 				<span>{filter}</span>
