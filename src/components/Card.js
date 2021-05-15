@@ -1,8 +1,15 @@
 import React from "react";
 
-const Card = ({flag, name, population, region, capital}) => {
+import {useHistory} from "react-router-dom";
+
+const Card = ({flag, name, population, region, capital, darkMode, country, setCurrentCountry}) => {
+	const history = useHistory();
+	const cardHandler = () => {
+		setCurrentCountry(country);
+		history.push("/details");
+	}
 	return(
-		<div className="card">
+		<div onClick={cardHandler} className={`card ${darkMode ? "card--dark" : null}`}>
 			<img className="card__flag" src={flag} alt="flag"/>
 			<div className="card__info">
 				<h4 className="card__info__name">{name}</h4>
